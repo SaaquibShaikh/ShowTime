@@ -54,7 +54,7 @@ python manage.py runserver
 
 ### Checking Shows for a movie in the City
 
-http://127.0.0.1/api/shows/Avengers/Hyderabad
+http://127.0.0.1/api/movies
 
 {
   "movies": [
