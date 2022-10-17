@@ -52,7 +52,7 @@ To start the server use the following command
 python manage.py runserver
 ```
 
-### Checking Shows for a movie in the City
+### Checking the top 25 movies
 
 http://127.0.0.1/api/movies
 
