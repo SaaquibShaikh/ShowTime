@@ -93,12 +93,12 @@ def available_shows_for_movie(request, movie_name, city_name):
 
 
 def all_movies(request):
-    if Movie.objects != None:
-        ia = Cinemagoer()
-        top = ia.get_top250_movies()[:26]
-        for movieInfo in top:
-            movieObj = Movie(name = movieInfo['title'], rating = movieInfo['rating'])
-            movieObj.save()
+    Movie.objects.all().delete()
+    ia = Cinemagoer()
+    top = ia.get_top250_movies()[:26]
+    for movieInfo in top:
+        movieObj = Movie(name = movieInfo['title'], rating = movieInfo['rating'])
+        movieObj.save()
     movies = Movie.objects.all().values()
     movie_list = list(movies)
     return JsonResponse({"movies": movie_list})
